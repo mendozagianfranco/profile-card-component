@@ -1,0 +1,130 @@
+:root {
+    --primary-card-cyan: hsl(185, 75%, 39%);
+    --primary-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --primary-dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Kumbh Sans", sans-serif;
+    background: var(--primary-card-cyan);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat no-repeat;
+    background-size: 100vh, 100vh;
+    background-position: left -75vh top -50vh, right -75vh bottom -50vh;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 1fr auto;
+}
+
+/* Card */
+
+.card {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+/* card images */
+.card__images {
+    position: relative;
+}
+
+.card__images > .bg-pattern-card {
+    width: 100%;
+}
+
+.card__images > .card-image {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    outline: 5px solid #fff;
+}
+
+/* card text */
+.card__title {
+    margin: 70px 0 5px;
+    display: block;
+    font-weight: 700;
+}
+
+.card__title > .text--gray {
+    font-weight: 400;
+}
+
+.text--gray {
+    color: var(--primary-dark-grayish-blue);
+}
+
+.number,
+.card__title {
+    font-size: 1.125rem;
+}
+
+.line {
+    height: 1px;
+    background: var(--dark-gray);
+    opacity: 0.5;
+    border: none;
+    margin: 20px 0;
+}
+
+.card__info {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.number {
+    color: var(--primary-very-dark-desaturated-blue);
+    font-size: 1.2rem;
+    display: block;
+    font-weight: 700;
+}
+
+.card__stats > .text--gray {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+/* footer */
+
+.attribution {
+    font-size: 11px;
+    width: 100%;
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Resposive */
+
+/* Desktop */
+
+@media screen and (min-width: 23.438em) {
+    body {
+        background-size: 70vw, 70vw;
+        background-position: left -20vw top -40vw, right -20vw bottom -40vw;
+    }
+
+    .card {
+        width: 21.875rem;
+    }
+}
